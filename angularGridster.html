@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gridsterApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Gridster</title>
+	<link rel="stylesheet" href="angular/angular-gridster.min.css" />
+<style>
+	.data-gridster ul{
+		list-style: none;
+	}
+</style>
+</head>
+<body>
+	<section class="wrapper" ng-controller="gridsterCtrl">
+		<div class="data-gridster">
+	        <ul>
+	            <li data-gridster-item data-row="{{item.position[0]}}" data-col="{{item.position[1]}}" data-sizex="{{item.size.x}}" data-sizey="{{item.size.y}}" ng-repeat="item in customItems"></li>
+	        </ul>
+    	</div>
+	</section><!-- Wrapper End-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.resize.js"></script>
+  	<script src="angular/angular.min.js"></script>
+  	<script src="angular/angular-gridster.min.js"></script>
+  	<script src="js/angularGrid.js"></script>
+</body>
+</html>
